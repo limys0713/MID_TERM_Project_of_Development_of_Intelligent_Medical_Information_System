@@ -40,4 +40,12 @@ data = {
 # Send the request
 response = requests.post(url=url, json=data, headers=headers)
 
-print(response.text)
+# Handle the response
+if response.status_code == 200:
+    output = response.json()
+    questions = output['choices'][0]['message']['content']
+    print("問題如下：\n")
+    print(questions)
+else:
+    print("Error: ", response.status_code)
+    print(response.text)
