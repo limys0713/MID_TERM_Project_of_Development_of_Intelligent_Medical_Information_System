@@ -1,0 +1,3 @@
+# MID_TERM_Project_of_Development_of_Intelligent_Medical_Information_System
+
+Working on the Project now
